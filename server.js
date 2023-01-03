@@ -30,11 +30,11 @@ app.post('/create-checkout-session', async (req,res) => {
                     currency:'usd',
                     product_data: {
                         name: item.name,
-                        images: item.image,
                     },
                     unit_amount: item.price.raw * 100
                 },
                 quantity: item.quantity, 
+                images: item.image
             }
         }),
         success_url: 'http://localhost:3001'
